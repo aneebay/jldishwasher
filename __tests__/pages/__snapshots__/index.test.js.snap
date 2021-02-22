@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`With Snapshot Testing ProductGrid shows "Create Next App" 1`] = `
-<div>
+<div
+  className="undefined text-center"
+>
   <main>
-    <h1>
+    <h1
+      className="leading-10 text-3xl"
+    >
       Dishwashers
     </h1>
     <section />

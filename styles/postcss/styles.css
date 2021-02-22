@@ -3,23 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --main-bg-color: #f8f8f8;
-  --main-text-color: #595a63;
+  --main-bg-color: #f9f9f9;
+  --main-text-color: #3a3a3a;
   --color-white: #fff;
+  --color-light-grey: #737371;
   --color-greenish: #277c8b;
   --color-darkblue: #2c3f54;
   --color-red: #992828;
 }
 
-html,
 body {
-  padding: 0;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   font-family: GillSansforJL, "Gill Sans", "Gill Sans MT", GillSansMTStd-Medium, Avenir, Corbel, Arial, Helvetica, sans-serif;
+  padding: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1 {
+  font-weight: normal;
+  color: var(--color-light-grey);
 }
 
 * {

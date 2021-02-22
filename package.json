@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run build:css && next dev",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"PostCss,NextJs\" -c \"yellow.bold,cyan.bold\" \"npm run watch:css\" \"npm run next:dev\"",
     "build": "npm run build:css && next build",
     "build:css": "postcss styles/postcss/styles.css -o styles/globals.css",
+    "next:dev": "next dev",
     "start": "next start",
     "test": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "watch:css": "postcss styles/postcss/styles.css -o styles/globals.css -w"
   },
   "dependencies": {
     "autoprefixer": "^10.2.4",
@@ -19,9 +21,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
-    "babel-jest": "^26.1.0",
-    "enzyme": "~3.11.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
+    "babel-jest": "^26.1.0",
+    "concurrently": "^5.3.0",
+    "enzyme": "~3.11.0",
     "jest": "^26.6.3",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
