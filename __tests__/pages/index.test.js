@@ -2,20 +2,20 @@ import { shallow } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
-import ListPage from "../../pages/index";
+import ProductGrid from "../../pages/index";
 
 describe("With Enzyme", () => {
-  it('ListPage shows "Create Next App"', () => {
-    const app = shallow(<ListPage />);
+  it('ProductGrid shows expected title and heading text', () => {
+    const app = shallow(<ProductGrid />);
 
-    expect(app.find("title").text()).toEqual("Create Next App");
-    expect(app.find("h1").text()).toEqual("Welcome to Next.js!");
+    expect(app.find("title").text()).toEqual("Dishwashers");
+    expect(app.find("h1").text()).toEqual("Dishwashers");
   });
 });
 
 describe("With Snapshot Testing", () => {
-  it('ListPage shows "Create Next App"', () => {
-    const component = renderer.create(<ListPage />);
+  it('ProductGrid shows "Create Next App"', () => {
+    const component = renderer.create(<ProductGrid />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
