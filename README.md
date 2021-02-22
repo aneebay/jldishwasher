@@ -79,6 +79,7 @@ Below are some constraints I have set before deciding on tech:
     - Comes with lots of functionality out of the box eg. responsive, grid ✅ 
     - Danger for abuse / over-use ❌
     - Danger of neglecting CSS  ❌
+    - Potentially adds bloat to CSS bundle  ❌
 
 ### Decision
 
