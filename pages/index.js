@@ -10,8 +10,17 @@ export default function ProductGrid() {
       </Head>
       <main className={styles.main}>
         <h1 className="leading-10 text-3xl my-4">Dishwashers</h1>
-        <section className={styles.section}>
-            Here the grid will go.
+        <section className={`${styles.section} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
+            <div>product</div>
         </section>
       </main>
     </div>
