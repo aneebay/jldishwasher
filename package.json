@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run build:css && next dev",
+    "build": "npm run build:css && next build",
+    "build:css": "postcss styles/postcss/styles.css -o styles/globals.css",
     "start": "next start",
     "test": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.4",
     "next": "10.0.7",
     "react": "^17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -20,6 +23,8 @@
     "enzyme": "~3.11.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "jest": "^26.6.3",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
     "react-test-renderer": "17.0.1"
   }
 }

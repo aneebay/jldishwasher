@@ -20,6 +20,14 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 
+### Tests
+
+To run tests:
+```
+npm run test
+```
+You may need to press the 'a' key to run all tests.
+
 ## Business Requirements
 * Build a web app that can be used to sell dishwashers.
 * The app consist of a listing page (grid) and product details pages for each product
