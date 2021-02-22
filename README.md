@@ -19,14 +19,51 @@ Below are some constraints I have set before deciding on tech:
 - Easy to maintain
 - Testable
 - Easy to scale
-### Options
+### Options (with pros(✅ ) and cons(❌))
 - HTML / CSS / JavaScript (vanilla)
+    - Avoids complex setup and overhead ✅ 
+    - High chance of good accessibility, perfomrance & adhering to browser standards ✅ 
+    - Doesn't scale well when project grows ❌
+    - Hard to maintain eventually ❌
+    - Lack of sophistication / modern FE practices and features ❌
 - Express (Node.js)
+    - Widely used and trusted ✅ 
+    - Supports a progressive enhamcent approach ✅ 
+    - Can difficult to work with, lack of standard coding practice ❌
+    - Challenging to scale ❌
 - React.js
+    - Widely used, trusted and modern ✅ 
+    - Easy to maintain ✅ 
+    - Can scale easily ✅ 
+    - Offers good performance ✅ 
+    - Dependent on JS on the client ❌
+    - Danger of over-kill ❌
 - Next.js
+    - Based on React.js, hence familiar and all it's advantages ✅ 
+    - Isomorphic, so it supports progressive enhancement and modern approach ✅ 
+    - Great DX and best practices already baked in ✅ 
+    - Too opinionated ❌
 - SASS
-- PostCSS / TalwindCSS
+    - Popular and widely used. Familiar ✅ 
+    - Offers better code organisation than regular CSS ✅ 
+    - Superceded by more modern tools and techniques, especially when other frameworks are used ❌
+- Tailwind CSS (using PostCSS)
+    - Popular and widely used. Familiar ✅ 
+    - Offers great DX and workflow ✅ 
+    - Works well with any framework ✅ 
+    - Comes with lots of functionality out of the box eg. responsive, grid ✅ 
+    - Danger for abuse / over-use ❌
+    - Danger of neglecting CSS  ❌
+
+### Decision
+
+There isn't a perfect choice, however considering the goals of the project and constraints, I have decided to build the solution with the following:
+* Next.js
+* Tailwind CSS (using PostCSS)
+
 
 ## Project tasks
+
+Tasks are managed on the [Github Projects board](https://github.com/aneebay/jldishwasher/projects/1).
 
 ## Other Notes
