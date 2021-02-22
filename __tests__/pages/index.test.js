@@ -8,7 +8,8 @@ describe("With Enzyme", () => {
   it('ListPage shows "Create Next App"', () => {
     const app = shallow(<ListPage />);
 
-    expect(app.find("header").text()).toEqual("Create Next App");
+    expect(app.find("title").text()).toEqual("Create Next App");
+    expect(app.find("h1").text()).toEqual("Welcome to Next.js!");
   });
 });
 
