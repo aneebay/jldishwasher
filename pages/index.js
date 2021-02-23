@@ -8,7 +8,7 @@ export default function ProductGrid() {
   const productItemsCards = productItems.map(productItem => {
     const {productId, image, title, price} = productItem;
     return (
-      <div key={productId} className="product-item">
+      <div key={productId} className={`product-item ${styles.item}`}>
         <img src={image} alt={title} />
         <h3>
           <a href={``}>{title}</a>

@@ -7,3 +7,7 @@
 .section {
     background-color: #fff;
 }
+
+.item {
+    border: 1px solid #dfdcd3;
+}
