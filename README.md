@@ -80,6 +80,8 @@ Below are some constraints I have set before deciding on tech:
     - Danger for abuse / over-use ❌
     - Danger of neglecting CSS  ❌
     - Potentially adds bloat to CSS bundle  ❌
+- Axios
+    - Popular and widely used. Familiar ✅ 
 
 ### Decision
 
