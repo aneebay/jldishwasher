@@ -5,14 +5,32 @@ import axios from "axios";
 
 export default function ProductGrid() {
   const [productItems, setProductItems] = useState([]);
+  console.log({productItems});
+  const productItemsCards = productItems.map(productItem => {
+    console.log("in the map", productItem);
+    const {productId, image, title, price} = productItem;
+    return (
+      <div key={productId} className="product-item">
+        <img src={image} alt={title} />
+        <h3>
+          <a href={``}>{title}</a>
+        </h3>
+        <h4>£{price.now}</h4>
+      </div>
+    )
+  });
 
-  useEffect(() => {
-    axios.get("/api/products")
+  useEffect(async () => {
+    const dishwashersList = await axios.get("/api/dishwashers")
       .then(response => {
-        console.log(response)
+        // console.log(response);
+        console.log("after render", response.data);
+        return response.data;
       }).catch(error => {
         console.log(error)
       });
+      console.log("result", dishwashersList);
+      setProductItems(dishwashersList);
   }, []);
 
   return (
@@ -26,16 +44,7 @@ export default function ProductGrid() {
         <section
           className={`${styles.section} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
         >
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
-          <div>product</div>
+          {productItemsCards}
         </section>
       </main>
     </div>

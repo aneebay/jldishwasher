@@ -6,11 +6,13 @@ exports[`With Snapshot Testing ProductGrid shows "Create Next App" 1`] = `
 >
   <main>
     <h1
-      className="leading-10 text-3xl"
+      className="leading-10 text-3xl my-4"
     >
       Dishwashers
     </h1>
-    <section />
+    <section
+      className="undefined grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    />
   </main>
 </div>
 `;
