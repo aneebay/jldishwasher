@@ -16,14 +16,6 @@ const waitForComponentToPaint = async (wrapper) => {
 };
 
 describe("With Enzyme", () => {
-  test("ProductGrid shows expected title and heading text", async () => {
-    const app = shallow(<ProductGrid />);
-
-    await waitForComponentToPaint(app);
-
-    expect(app.find("title").text()).toEqual("Dishwashers - Product Grid");
-    expect(app.find("h1").text()).toEqual("Dishwashers");
-  });
 
   test("ProductGrid renders expected number of ProductItem component elements", async () => {
     const mockProductGridApiResponse = {
@@ -74,6 +66,7 @@ describe("With Enzyme", () => {
 
     await waitForComponentToPaint(app);
 
+    expect(app.find("h1").text()).toEqual("Dishwashers (3)");
     expect(app.find(".product-item").length).toBe(3);
   });
 });

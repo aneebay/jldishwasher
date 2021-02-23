@@ -33,7 +33,7 @@ export default function ProductGrid() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className="leading-10 text-3xl my-4">Dishwashers</h1>
+        <h1 className="leading-10 text-3xl my-4">Dishwashers ({productItems.length})</h1>
         <section
           className={`${styles.section} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
         >
