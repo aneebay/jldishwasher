@@ -95,3 +95,7 @@ There isn't a perfect choice, however considering the goals of the project and c
 Tasks are managed on the [Github Projects board](https://github.com/aneebay/jldishwasher/projects/1).
 
 ## Other Notes
+
+### Issues faced
+
+* Next.js/React was unable to make a successful request to the API due to CORS restrictions. To resolve this, I had to proxy the request via Next.js api routes

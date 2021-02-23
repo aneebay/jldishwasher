@@ -7,7 +7,7 @@ export default function ProductGrid() {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
-    axios.get("https://api.johnlewis.com/search/api/rest/v2/catalog/products/search/keyword?q=dishwasher&key=AIzaSyDD_6O5gUgC4tRW5f9kxC0_76XRC8W7_mI")
+    axios.get("/api/products")
       .then(response => {
         console.log(response)
       }).catch(error => {

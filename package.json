@@ -15,7 +15,9 @@
   "dependencies": {
     "autoprefixer": "^10.2.4",
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "next": "10.0.7",
+    "next-connect": "^0.10.0",
     "react": "^17.0.1",
     "react-dom": "17.0.1",
     "tailwindcss": "^2.0.2"
