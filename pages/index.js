@@ -5,9 +5,7 @@ import axios from "axios";
 
 export default function ProductGrid() {
   const [productItems, setProductItems] = useState([]);
-  console.log({productItems});
   const productItemsCards = productItems.map(productItem => {
-    console.log("in the map", productItem);
     const {productId, image, title, price} = productItem;
     return (
       <div key={productId} className="product-item">
@@ -23,13 +21,10 @@ export default function ProductGrid() {
   useEffect(async () => {
     const dishwashersList = await axios.get("/api/dishwashers")
       .then(response => {
-        // console.log(response);
-        console.log("after render", response.data);
         return response.data;
       }).catch(error => {
         console.log(error)
       });
-      console.log("result", dishwashersList);
       setProductItems(dishwashersList);
   }, []);
 

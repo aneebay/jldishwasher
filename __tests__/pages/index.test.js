@@ -27,8 +27,7 @@ describe("With Enzyme", () => {
 
   test("ProductGrid renders expected number of ProductItem component elements", async () => {
     const mockProductGridApiResponse = {
-      data: {
-        products: [
+      data: [
           {
             productId: "3289196",
             title: "Bosch SMS25EW00G Freestanding Dishwasher, White",
@@ -68,8 +67,7 @@ describe("With Enzyme", () => {
               currency: "GBP",
             },
           }
-        ],
-      }
+        ]
     };
     axios.get.mockResolvedValue(mockProductGridApiResponse);
     const app = mount(<ProductGrid />);
