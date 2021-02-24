@@ -3,6 +3,20 @@ import React from "react";
 import renderer from "react-test-renderer";
 import axios from "axios";
 import { act } from 'react-dom/test-utils';
+import { useRouter } from "next/router";
+
+jest.mock("next/router", () => ({
+    useRouter() {
+        return {
+            route: "/",
+            pathname: "",
+            query: {
+                pid: "1234"
+            },
+            asPath: "",
+        };
+    },
+}));
 
 jest.mock("axios");
 

@@ -8,13 +8,42 @@ exports[`With Snapshot Testing ProductDetail snapshot 1`] = `
     <h1
       className="leading-10 text-3xl my-4"
     >
-      Dishwashers (
-      0
-      )
+      Product title
     </h1>
-    <section
-      className="undefined grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-    />
+    <article
+      className="undefined"
+    >
+      <ul>
+        <li>
+          Image 1
+        </li>
+        <li>
+          Image 2
+        </li>
+        <li>
+          Image 3
+        </li>
+      </ul>
+      <section>
+        <h2>
+          Price
+        </h2>
+        <h5>
+          Special offer
+        </h5>
+        <h5>
+          Special offer
+        </h5>
+      </section>
+      <section>
+        <h3>
+          Product Information
+        </h3>
+        <p>
+          bla bla
+        </p>
+      </section>
+    </article>
   </main>
 </div>
 `;
