@@ -9,7 +9,7 @@ export default function ProductDetail() {
   const { pid } = router.query;
   const [productDetails, setProductDetails] = useState({});
 
-  useEffect(async () => {  
+  useEffect(async () => {
     if (!pid) {
       return;
     }
@@ -21,7 +21,8 @@ export default function ProductDetail() {
       .catch((error) => {
         console.log(error);
       });
-    setProductDetails(productData);
+    const { title, price } = productData;
+    setProductDetails({ title, price: price.now });
   }, []);
 
   return (
@@ -31,7 +32,7 @@ export default function ProductDetail() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className="leading-10 text-3xl my-4">Product title</h1>
+        <h1 className="leading-10 text-3xl my-4">{productDetails.title}</h1>
         <article className={`${styles.section}`}>
           <ul>
             <li>Image 1</li>
@@ -39,7 +40,7 @@ export default function ProductDetail() {
             <li>Image 3</li>
           </ul>
           <section>
-            <h2>Price</h2>
+            <h2>£{productDetails.price}</h2>
             <h5>Special offer</h5>
             <h5>Special offer</h5>
           </section>

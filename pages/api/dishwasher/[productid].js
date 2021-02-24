@@ -12,7 +12,6 @@ const handler = nc()
         config
       );
       const productDetails = await response.json();
-      console.log(productDetails)
       res.status(200).json(productDetails);
     } catch (err) {
       console.error(err);

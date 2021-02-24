@@ -7,9 +7,7 @@ exports[`With Snapshot Testing ProductDetail snapshot 1`] = `
   <main>
     <h1
       className="leading-10 text-3xl my-4"
-    >
-      Product title
-    </h1>
+    />
     <article
       className="undefined"
     >
@@ -26,7 +24,7 @@ exports[`With Snapshot Testing ProductDetail snapshot 1`] = `
       </ul>
       <section>
         <h2>
-          Price
+          £
         </h2>
         <h5>
           Special offer
