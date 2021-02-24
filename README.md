@@ -99,3 +99,4 @@ Tasks are managed on the [Github Projects board](https://github.com/aneebay/jldi
 ### Issues faced
 
 * Next.js/React was unable to make a successful request to the API due to CORS restrictions. To resolve this, I had to proxy the request via Next.js api routes
+* Struggled to get the `router.query` params until I realised that `useRouter` is a hook which won't be populated until the page is hydrated.

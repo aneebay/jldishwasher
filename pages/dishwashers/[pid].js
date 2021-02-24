@@ -9,18 +9,19 @@ export default function ProductDetail() {
   const { pid } = router.query;
   const [productDetails, setProductDetails] = useState({});
 
-  useEffect(async () => {
+  useEffect(async () => {  
+    if (!pid) {
+      return;
+    }
     const productData = await axios
       .get(`/api/dishwasher/${pid}`)
       .then((response) => {
-        console.log("data", response.data);
         return response.data;
       })
       .catch((error) => {
         console.log(error);
       });
     setProductDetails(productData);
-    console.log("pid", pid);
   }, []);
 
   return (
