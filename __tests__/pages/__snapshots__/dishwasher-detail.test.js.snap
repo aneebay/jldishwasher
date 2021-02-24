@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing ProductDetail snapshot 1`] = `
+<div
+  className="undefined text-center"
+>
+  <main>
+    <h1
+      className="leading-10 text-3xl my-4"
+    >
+      Dishwashers (
+      0
+      )
+    </h1>
+    <section
+      className="undefined grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    />
+  </main>
+</div>
+`;
