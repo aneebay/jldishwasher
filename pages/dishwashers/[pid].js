@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../../styles/Detail.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import axios from "axios";
 
 export default function ProductDetail() {
@@ -32,9 +33,14 @@ export default function ProductDetail() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className="leading-10 text-3xl my-4">{productDetails.title}</h1>
+        <div className="flex">
+          <Link href="/">
+            &laquo; Back
+          </Link>
+          <h1 className="leading-10 text-3xl my-4">{productDetails.title}</h1>
+        </div>
         <article className={`${styles.section}`}>
-          <ul>
+          <ul className="flex">
             <li>Image 1</li>
             <li>Image 2</li>
             <li>Image 3</li>
