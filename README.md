@@ -14,11 +14,9 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Next.js Documentation](https://nextjs.org/docs)
 
 ### Tests
 
@@ -93,10 +91,23 @@ There isn't a perfect choice, however considering the goals of the project and c
 ## Project tasks
 
 Tasks are managed on the [Github Projects board](https://github.com/aneebay/jldishwasher/projects/1).
-
-## Other Notes
-
 ### Issues faced
 
 * Next.js/React was unable to make a successful request to the API due to CORS restrictions. To resolve this, I had to proxy the request via Next.js api routes
 * Struggled to get the `router.query` params until I realised that `useRouter` is a hook which won't be populated until the page is hydrated.
+
+## Other Notes
+
+As I make this final commit before subission, I would like to point out things that I would've done differently if given more time. PS: the lack of time to complete was purely due to my unavailability most of the week. Sufficient time was given to complete this task.
+
+### What I would have liked to complete:
+* I would have completed the product detail page UI using grid layout for the responsive columns.
+* I would have finished the carousel (I already started by attempting a CSS only scroll snap carousel, but only got round to using one image).
+* Tackled the issues I was facing with the tests for the product detail proxy API.
+* Provided better test coverage
+* Created a utility function that formats the currency based on the value from API. ie. `GBP` formats to `£`, rather than hardcoding the value in the JSX template.
+
+
+## Things I could have done differenlty
+* Stuck to one CSS approach rather than using two (CSS Modules and PostCSS/Tailwind)
+* Taken advantage of environment variables to manage the API keys, rather than have them exposed in source code
