@@ -6,41 +6,61 @@ exports[`With Snapshot Testing ProductDetail snapshot 1`] = `
 >
   <main>
     <div
-      className="flex"
+      className="flex justify-center items-center leading-10"
     >
-      <a
-        href="/"
+      <span
+        className="text-4xl px-5 u-grey-text cursor-pointer"
         onClick={[Function]}
         onMouseEnter={[Function]}
       >
-        « Back
-      </a>
+        «
+      </span>
       <h1
-        className="leading-10 text-3xl my-4"
+        className="text-3xl my-4"
       />
     </div>
-    <article>
+    <article
+      className="text-left u-grey-text"
+    >
       <ul
-        className="container mx-auto flex undefined"
+        className="container mx-auto flex text-center undefined"
       />
-      <section>
-        <h2>
+      <section
+        className="container mx-auto mb-9 px-5"
+      >
+        <h2
+          className="text-3xl"
+        >
           £
         </h2>
-        <h5>
-          Special offer
-        </h5>
-        <h5>
-          Special offer
-        </h5>
+        <h5
+          className="u-red-text text-2xl special-offer"
+        />
+        <h5
+          className="u-green-text included-services text-2xl"
+        />
       </section>
-      <section>
-        <h3>
+      <section
+        className="container mx-auto mb-9 px-5"
+      >
+        <h3
+          className="text-2xl mb-3"
+        >
           Product Information
         </h3>
-        <p>
-          bla bla
-        </p>
+        <div
+          className="product-information"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+        />
+        <div
+          className="product-code"
+        >
+          Product code: 
+        </div>
       </section>
     </article>
   </main>

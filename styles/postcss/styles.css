@@ -7,7 +7,7 @@
   --main-text-color: #3a3a3a;
   --color-white: #fff;
   --color-light-grey: #737371;
-  --color-greenish: #277c8b;
+  --color-greenish: #294e36;
   --color-darkblue: #2c3f54;
   --color-red: #992828;
 }
@@ -31,6 +31,14 @@ h1 {
 
 .u-red-text {
   color: var(--color-red);
+}
+
+.u-green-text {
+  color: var(--color-greenish);
+}
+
+.u-grey-text {
+  color: var(--color-light-grey);
 }
 
 * {
