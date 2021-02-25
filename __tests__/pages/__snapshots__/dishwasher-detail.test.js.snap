@@ -5,23 +5,24 @@ exports[`With Snapshot Testing ProductDetail snapshot 1`] = `
   className="undefined text-center"
 >
   <main>
-    <h1
-      className="leading-10 text-3xl my-4"
-    />
-    <article
-      className="undefined"
+    <div
+      className="flex"
     >
-      <ul>
-        <li>
-          Image 1
-        </li>
-        <li>
-          Image 2
-        </li>
-        <li>
-          Image 3
-        </li>
-      </ul>
+      <a
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        « Back
+      </a>
+      <h1
+        className="leading-10 text-3xl my-4"
+      />
+    </div>
+    <article>
+      <ul
+        className="container mx-auto flex undefined"
+      />
       <section>
         <h2>
           £

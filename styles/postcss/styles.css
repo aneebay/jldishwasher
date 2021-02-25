@@ -29,6 +29,10 @@ h1 {
   color: var(--color-light-grey);
 }
 
+.u-red-text {
+  color: var(--color-red);
+}
+
 * {
   box-sizing: border-box;
 }

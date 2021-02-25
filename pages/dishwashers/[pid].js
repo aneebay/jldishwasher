@@ -8,7 +8,7 @@ import axios from "axios";
 export default function ProductDetail() {
   const router = useRouter();
   const { pid } = router.query;
-  const [productDetails, setProductDetails] = useState({});
+  const [productDetails, setProductDetails] = useState({ images: []});
 
   useEffect(async () => {
     if (!pid) {
@@ -22,8 +22,8 @@ export default function ProductDetail() {
       .catch((error) => {
         console.log(error);
       });
-    const { title, price } = productData;
-    setProductDetails({ title, price: price.now });
+    const { title, price, media } = productData;
+    setProductDetails({ title, price: price.now, images: [media.images.urls[0]], imagesAltText: media.images.altText });
   }, []);
 
   return (
@@ -39,18 +39,22 @@ export default function ProductDetail() {
           </Link>
           <h1 className="leading-10 text-3xl my-4">{productDetails.title}</h1>
         </div>
-        <article className={`${styles.section}`}>
-          <ul className="flex">
-            <li>Image 1</li>
-            <li>Image 2</li>
-            <li>Image 3</li>
+        <article>
+          <ul className={`container mx-auto flex ${styles.imageCarousel}`}>
+            {productDetails.images.map(image => {
+              return (
+                <li key={image} className={`container ${styles.imageCarouselImage}`}>
+                  <img src={image} alt={productDetails.imagesAltText} />
+                </li>
+              )
+            })}
           </ul>
           <section>
             <h2>£{productDetails.price}</h2>
-            <h5>Special offer</h5>
-            <h5>Special offer</h5>
+            <h5 className="u-red-text">Special offer</h5>
+            <h5 className="u-green-text">Special offer</h5>
           </section>
-          <section>
+          <section className="product-information">
             <h3>Product Information</h3>
             <p>bla bla</p>
           </section>
